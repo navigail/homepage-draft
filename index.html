@@ -1,0 +1,68 @@
+<style>
+  body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(76, 201, 240, 1) 0%, rgba(72, 12, 168, 1) 100%);
+  }
+
+  svg {
+    width: 80%;
+    height: auto;
+  }
+
+  .venn-circle {
+    fill-opacity: 0.6;
+  }
+
+  text {
+    font-family: , sans-serif;
+    font-size: 40px;
+    font-style: bold;
+    fill: white;
+  }
+
+  [id^="curve"] {
+   display: none;
+  }
+</style>
+
+<svg viewBox="0 0 800 600">
+  <!-- Define circles for the Venn diagram -->
+  <circle cx="200" cy="200" r="180" fill="#4361ee" class="venn-circle" />
+  <circle cx="400" cy="200" r="180" fill="#7209b7" class="venn-circle" />
+  <circle cx="300" cy="350" r="180" fill="#b5179e" class="venn-circle" />
+  <circle cx="200" cy="400" r="180" fill="#f72585" class="venn-circle" />
+  <circle cx="400" cy="400" r="180" fill="#3a0ca3" class="venn-circle" />
+  <circle cx="600" cy="300" r="180" fill="#4cc9f0" class="venn-circle" />
+
+  <!-- Define paths for text to follow -->
+  <path id="curve1" d="M50,200 A150,150 0 0,1 350,200" />
+  <path id="curve2" d="M250,200 A150,150 0 0,1 550,200" />
+  <path id="curve3" d="M150,350 A150,150 0 0,1 450,350" />
+  <path id="curve4" d="M50,400 A150,150 0 0,1 350,400" />
+  <path id="curve5" d="M250,400 A150,150 0 0,1 550,400" />
+  <path id="curve6" d="M450,300 A150,150 0 0,1 750,300" />
+
+  <!-- Add text along the paths -->
+  <text style="transform: translate(0px, 0px)">
+    <textPath href="#curve1" startOffset="25%">access</textPath>
+  </text>
+  <text style="transform: translate(0px, 0px)">
+    <textPath href="#curve2" startOffset="50%">agency</textPath>
+  </text>
+  <text style="transform: translate(0px, 0px)">
+    <textPath href="#curve3" startOffset="75%">governance</textPath>
+  </text>
+  <text style="transform: translate(0px, 0px)">
+    <textPath href="#curve4" startOffset="75%">identity</textPath>
+  </text>
+  <text style="transform: translate(0px, 0px)">
+    <textPath href="#curve5" startOffset="50%">work</textPath>
+  </text>
+  <text style="transform: translate(0px, 0px)">
+    <textPath href="#curve6" startOffset="25%">property</textPath>
+  </text>
+</svg>
